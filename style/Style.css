@@ -35,3 +35,24 @@ a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 100px;
 }
+
+.foto{
+    width: 200px;
+}
+
+#logincor{
+    color: rgb(255, 218, 7);
+}
+
+.checkbox{
+    color: rgb(255, 255, 95);
+}
+
+.login{
+    justify-content: center;
+    text-align: center;
+}
+
+#corbotao{
+    background-color: rgb(255, 255, 100);
+}
