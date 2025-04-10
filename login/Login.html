@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/Style.css">
+    <link rel="icon" href="../style/Imgs/Titulo-removebg-preview.png" type="image/png">
     <script src="../script/ValidarLogin.js"></script>
     <title>Login</title>
 </head>
@@ -10,21 +11,38 @@
 <body>
     
     <header>
-
-        
-        
+        <img class="foto" src="../style/Imgs/Titulo-removebg-preview.png" alt="icone da empresa">
+        <h3>VAITREM</h3>
     </header>
 
     <main>
-
+        <div class="login">
+            <br>
+            <h2 id="logincor">LOGIN</h2>
         
+            <input type="text" id="usuario" name="usuario" required placeholder="Usuário">
+            
+            <br>
+            <br>
+
+            <input type="text" id="senha" name="senha" required placeholder="Senha">
+
+            <br>
+            <br>
+
+            <input type="checkbox">
+            <label for="lembre" class="checkbox">Lembre de mim:</label>
+
+            <br>
+            <br>
+
+            <button type="submit" onclick="validarLogin()" id="corbotao">Entrar</button>
+        </div>
 
     </main>
 
     <footer>
-
-
-
+        <h3> © 2025 VAITREM. All rights reserved.</h3>
     </footer>
 
 </body>
