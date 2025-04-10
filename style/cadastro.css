@@ -7,18 +7,31 @@
   
   body {
     background-color: #FFD700; 
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 1000px;
   }
   
+  .direitos{
+    justify-content: center;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+header{
+  text-align: center;
+  padding: 20px;
+}
   .cadastro-box {
     background-color: #2e2e2e; 
     border-radius: 20px;
     width: 100%;
     max-width: 800px;
-    height: 1000px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
   
@@ -48,8 +61,6 @@
     font-size: 20px;
     width: 200px; 
 ; 
-  
-
  }
   
   .btn-proximo:hover {
