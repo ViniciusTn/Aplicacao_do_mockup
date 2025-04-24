@@ -19,7 +19,6 @@ main{
 
 .direitos{
     justify-content: center;
-    position: absolute;
     bottom: 0%;
     width: 100%;
     text-align: center;
@@ -60,3 +59,18 @@ a{
     background-color: rgb(255, 255, 99);
 }
 
+.quadradoAmarelo{
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padding{
+    padding: 20px;
+}
