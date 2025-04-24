@@ -9,51 +9,48 @@
 </head>
 <body>
 
-  <header>
-    <img class="foto" src="../assets/icons/iconeVaitrem.png" alt="icone da empresa" width="15%">
-    <h3>VAITREM</h3>
-  </header>
+  <div class="topo">
+    <img src="../assets/icons/iconeVaitrem.png" alt="Logo">
+    <p>VaiTrem</p>
+  </div>
 
+  <main class="tela-principal">
+    <div class="cadastro-box">
+      <div class="cadastro-title">Cadastro</div>
 
-  <main>
-  <div class="cadastro-box">
-    <div>
-    <div class="cadastro-title">Cadastro</div>
-    
-    <br>
-        
+      
+      <div class="data-inputs">
         <div class="form-group">
-          <input type="text" placeholder="Nome completo" required />
+          <label for="dia">Dia</label>
+          <input type="text" id="dia" placeholder="DD" required />
         </div>
-    
         <div class="form-group">
-          <input type="text" placeholder="Usuário" required />
+          <label for="mes">Mês</label>
+          <input type="text" id="mes" placeholder="MM" required />
         </div>
-    
         <div class="form-group">
-          <input type="password" placeholder="Senha" required />
+          <label for="ano">Ano</label>
+          <input type="text" id="ano" placeholder="AAAA" required />
         </div>
-    
-        <div class="form-group">
-          <input type="password" placeholder="Confirmar senha" required />
-        </div>
-    
-        <br>
-        <div class="center">
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="Usuário" required />
+      </div>
+
+      <div class="form-group">
+        <input type="password" placeholder="Email" required />
+      </div>
+
+      <div class="form-group">
+        <input type="password" placeholder="Nome Completo" required />
+      </div>
+
+      <div class="center">
         <button class="btn-proximo">Próximo</button>
-        </div>
-        <br>
-        <br>
+      </div>
     </div>
   </main>
-
-  <footer>
-    <br>
-        <div class="direitos">
-        <h3> © 2025 VAITREM. All rights reserved.</h3>
-        </div>
-  </footer>
-
 
 </body>
 </html>

@@ -1,81 +1,140 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body {
-    background-color: yellow;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .direitos{
-    justify-content: center;
-    bottom: 0%;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: black;
-    color: white;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header{
+body {
+  background-color: yellow;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.direitos {
+  justify-content: center;
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: rgb(246, 246, 246);
+}
+
+input{
+ background-color: #716e6e;
+ 
+}
+
+header {
   text-align: center;
   padding: 20px;
 }
-  .cadastro-box {
-    background-color: #2e2e2e; 
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-  
-  .cadastro-title {
-    color:yellow;
-    text-align: center;
-    font-size: 50px;
-    margin-bottom:20px;
-   
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    max-width: 3000px;
-    padding: 10px;
-    font-size: 20px;
-  }
-  
-  .btn-proximo {
-    background-color: yellow;
-    color: #000000;
-    padding: 20px;
-    font-size: 20px;
-    width: 200px; 
-; 
- }
-  
-  .btn-proximo:hover {
-    background-color:yellow;
-  }
 
-  #cadasrobox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* garante que fique à esquerda */
+  padding: 20px;
+  width: 100%;
+}
+
+.topo img {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.topo p {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+.topo p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Caixa principal */
+.cadastro-box {
+  background-color: #323030;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: column;
+}
+
+/* Título */
+.cadastro-title {
+  color: yellow;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  background-color: #716e6e; 
+  padding: 15px;
+  border-radius: 15px;
+  color: #000000;
+}
+
+
+.form-group input {
+  width: 100%;
+  max-width: 3000px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  color: #000000;
+}
+
+
+.data-inputs {
+  display: flex;
+  gap: 10px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 10px;
+  color: #000000;
+
+}
+
+
+
+
+/* Botão próximo */
+.btn-proximo {
+  background-color: rgb(210, 210, 56);
+  color: #000000;
+  padding: 20px;
+  font-size: 10px;
+  width: 250px;
+  border-radius: 20px; 
+  cursor: pointer;
+}
+
+
+
+
+/* Container geral */
+#cadasrobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
