@@ -34,8 +34,7 @@ main{
 
 a{
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 100px;
+    text-decoration: none;
 }
 
 .foto{
