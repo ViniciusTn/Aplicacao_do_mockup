@@ -74,3 +74,29 @@ a{
     padding: 20px;
 }
 
+.Gerenciador{
+    color: white;
+    padding: 20px;
+}
+
+#botaoFuncionario{
+    width: 700px;
+    height: 50px;
+    background-color: rgb(255, 255, 99);
+}
+
+#arrumador{
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.funcionariano{
+    width: 20%;
+}
