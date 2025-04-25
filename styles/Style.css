@@ -98,5 +98,18 @@ a{
 }
 
 .funcionariano{
-    width: 20%;
+    width: 200px;
+    padding: 20px;
+}
+
+.adicionar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.scroll{
+    overflow-y: scroll;
+    height: 80%;
+    scrollbar-color: yellow gray;
 }
