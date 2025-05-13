@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  width: 100%;
+  background-color: #ff0;
+}
+
+.topo img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.topo p {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.tela-principal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.cadastro-box {
+  background-color: #323030;
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.cadastro-title {
+  color: yellow;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #716e6e;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-proximo {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(210, 210, 56);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
