@@ -75,6 +75,7 @@ a{
 }
 
 .Gerenciador{
+    direction: ltr;
     color: white;
     padding: 20px;
 }
@@ -92,6 +93,7 @@ a{
 }
 
 .nav{
+    direction: ltr;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -111,17 +113,20 @@ a{
 }
 
 .scroll{
+    direction: rtl;
     overflow-y: scroll;
     height: 80%;
     scrollbar-color: yellow gray;
 }
 
+
 .pesquisar{
     background-color: grey;
+    border-radius: 20px;
 }
 
 #lupa{
-    width: 15%;
+    width:110%;
 }
 
 .flexB{
@@ -129,5 +134,15 @@ a{
 }
 
 #navbar{
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    height: 10%;
     display: flex;
+}
+
+#navbar2{
+  display: flex;
+  justify-content: center;
+ align-items: center;
 }
