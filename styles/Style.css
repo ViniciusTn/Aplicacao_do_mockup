@@ -83,6 +83,7 @@ a{
     width: 700px;
     height: 50px;
     background-color: rgb(255, 255, 99);
+    border-radius: 52px;
 }
 
 #arrumador{
@@ -100,6 +101,7 @@ a{
 .funcionariano{
     width: 200px;
     padding: 20px;
+    border-radius: 52px;
 }
 
 .adicionar{
@@ -112,4 +114,20 @@ a{
     overflow-y: scroll;
     height: 80%;
     scrollbar-color: yellow gray;
+}
+
+.pesquisar{
+    background-color: grey;
+}
+
+#lupa{
+    width: 15%;
+}
+
+.flexB{
+    display: flex;
+}
+
+#navbar{
+    display: flex;
 }
