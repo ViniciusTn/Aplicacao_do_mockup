@@ -146,3 +146,58 @@ a{
   justify-content: center;
  align-items: center;
 }
+
+.Container{
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.TelaLinha{
+    background-color: black;
+}
+
+.ContatarMaquinista{
+    background-color: yellow;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.DefeitoChuva{
+    color: rgb(245, 130, 130);
+    text-align: center;
+    background-color: darkred;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AlterarRota{
+    background-color: yellow;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.Alerta{
+    width: 300px;
+}
+
+.Alerta2{
+    width: 200px;
+}
+
+.Teste{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.LinhaChuva{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
