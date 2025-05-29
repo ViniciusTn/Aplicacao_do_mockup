@@ -28,13 +28,26 @@ body{
 
 #corpo{
     background-color: #3b3b3a;
-    padding: 50px;
-    padding-bottom: 617px;
+    padding: 13px;
+    padding-bottom: 70px;
     border-radius: 10px;
+    margin: 0%;
+    align-items: center;
 }
 
 .app{
     background-color: #ffe500;
-    padding: 40px;
+    padding: 70px;
     border-radius: 20px;
+    margin: 15px;
+    
+}
+
+.notificacoes{
+    background-color: #ffe500;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 15px;
+    padding-bottom: 200px;
+    
 }
