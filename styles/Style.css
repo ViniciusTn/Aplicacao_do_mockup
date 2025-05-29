@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: yellow;
+    background-color: #ffe500;
     color: black;
 }
 
@@ -203,7 +203,10 @@ a{
     justify-content: center;
 }
 
+<<<<<<< HEAD
 
 .voltar{
     height: 100px;
 }
+=======
+>>>>>>> 1fe8141d2bac083f063e0e397d30d738d1d5e7e6
