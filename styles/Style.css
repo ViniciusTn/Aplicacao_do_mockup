@@ -168,6 +168,7 @@ a{
     color: rgb(245, 130, 130);
     text-align: center;
     background-color: darkred;
+    
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -202,3 +203,10 @@ a{
     justify-content: center;
 }
 
+<<<<<<< HEAD
+
+.voltar{
+    height: 100px;
+}
+=======
+>>>>>>> 1fe8141d2bac083f063e0e397d30d738d1d5e7e6
