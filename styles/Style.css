@@ -211,3 +211,11 @@ a{
 .imagemrotas{
     height: 170px;
 }
+
+.amarelorota{
+    background-color: #ffe500;
+    padding: 5px;
+    border-radius: 50px;
+   align-items: center;
+   justify-content: space-between;
+}
