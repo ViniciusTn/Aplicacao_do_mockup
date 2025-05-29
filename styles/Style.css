@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: yellow;
+    background-color: #ffe500;
     color: black;
 }
 
@@ -201,3 +201,4 @@ a{
     align-items: center;
     justify-content: center;
 }
+
