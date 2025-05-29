@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: yellow;
+    background-color: #ffe500;
     color: black;
 }
 
@@ -168,6 +168,7 @@ a{
     color: rgb(245, 130, 130);
     text-align: center;
     background-color: darkred;
+    
     border-radius: 50px;
     display: flex;
     align-items: center;

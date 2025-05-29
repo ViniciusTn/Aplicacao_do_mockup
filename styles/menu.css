@@ -1,0 +1,53 @@
+body{
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffe500;
+    color: black;
+}
+
+#navbar{
+    background-color: #ffe500;
+
+}
+
+#titulo{
+    background-color: #dbc607;
+    padding: 0px;
+    border-radius: 50px;
+    margin: 15px;
+    font-size: 25px;
+}
+
+.flex{
+    display: flex;
+}
+
+#logo{
+    height: 127px;
+}
+
+#corpo{
+    background-color: #3b3b3a;
+    padding: 13px;
+    padding-bottom: 70px;
+    border-radius: 10px;
+    margin: 0%;
+    align-items: center;
+}
+
+.app{
+    background-color: #ffe500;
+    padding: 70px;
+    border-radius: 20px;
+    margin: 15px;
+    
+}
+
+.notificacoes{
+    background-color: #ffe500;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 15px;
+    padding-bottom: 200px;
+    
+}
