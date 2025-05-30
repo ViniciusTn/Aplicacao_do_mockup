@@ -212,7 +212,11 @@ a{
     height: 170px;
 }
 
-
+.Defeito{
+    background-color: #b21e1e;
+    text-align: center;
+    border-radius: 50px;
+}
 
 
 
