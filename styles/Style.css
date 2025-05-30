@@ -211,3 +211,41 @@ a{
 .imagemrotas{
     height: 170px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.buttonVoltar{
+    background-color: rgb(75, 75, 75);
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    border: none;
+}
+
+.buttonVoltar:hover{
+    transform: scale(1.1);
+}
