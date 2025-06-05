@@ -85,8 +85,8 @@ header {
 .form-group {
   margin-bottom: 20px;
   background-color: #716e6e; 
-  padding: 15px;
-  border-radius: 15px;
+  padding: 5px;
+  border-radius: 0px;
   color: #000000;
 }
 
@@ -104,13 +104,13 @@ header {
 
 .data-inputs {
   display: flex;
-  gap: 10px;
-  width: 400px;
+  width: 200px;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0px;
   font-size: 10px;
   color: #000000;
+
 
 }
 
