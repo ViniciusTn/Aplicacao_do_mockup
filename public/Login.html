@@ -20,25 +20,34 @@
             <br>
             <h2 id="logincor">LOGIN</h2>
         
-            <input type="text" id="usuario" name="usuario" required placeholder="Usuário">
-            
-            <br>
-            <br>
+            <form id="loginFormulario">
 
-            <input type="text" id="senha" name="senha" required placeholder="Senha">
+                <label for="usuario"></label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Usuário">
+                <div class="error" id="erroUsuario"></div>
 
-            <br>
-            <br>
+                <br>
+                <br>
 
-            <input type="checkbox">
-            <label for="lembre" class="checkbox">Lembre de mim :</label>
+                <label for="senha"></label>
+                <input type="text" id="senha" name="senha" required placeholder="Senha">
+                <div class="error" id="erroSenha"></div>
 
-            <br>
-            <br>
 
-            <button type="submit" onclick="validarLogin()" id="corbotao">Entrar</button>
+                <br>
+                <br>
+
+                <input type="checkbox">
+                <label for="lembre" class="checkbox">Lembre de mim :</label>
+
+                <br>
+                <br>
+
+                <button type="submit">Entrar</button>
         </div>
-
+            
+            </form>
+    
     </main>
 
     <footer>

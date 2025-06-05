@@ -29,7 +29,7 @@ body{
 #corpo{
     background-color: #3b3b3a;
     padding: 13px;
-    padding-bottom: 70px;
+    padding-bottom: 15px;
     border-radius: 10px;
     margin: 0%;
     align-items: center;
@@ -41,6 +41,8 @@ body{
     border-radius: 20px;
     margin: 15px;
     text-align: center;
+    padding-left: 12px;
+    padding-right: 12px
     
 }
 
@@ -50,8 +52,8 @@ body{
     border-radius: 20px;
     margin: 15px;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 29px;
+    padding-right: 29px;
     
 }
 
@@ -61,8 +63,8 @@ body{
     border-radius: 20px;
     margin: 15px;
     text-align: center;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #relatorioCorpo{
@@ -71,8 +73,8 @@ body{
     border-radius: 20px;
     margin: 15px;
     text-align: center;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 21px;
+    padding-right: 21px;
 }
 
 .notificacoes{
@@ -80,8 +82,9 @@ body{
     padding: 15px;
     border-radius: 20px;
     margin: 15px;
-    padding-bottom: 200px;
-    
+    padding-bottom: 50px;
+    align-items: center;
+    text-align: center;
 }
 
 .icone{
@@ -94,4 +97,16 @@ body{
 
 p{
     margin:0%
+}
+
+#notif{
+    padding: 20px;
+    background-color: black;
+    color: #dbc607;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#iconNotif{
+    height: 130px;
 }
