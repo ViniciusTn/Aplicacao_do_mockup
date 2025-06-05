@@ -11,20 +11,27 @@ header{
     background-color: #ffe500;
 }
 
+.header_login{
+    text-align: center;
+}
+
 main{
-    margin: 10px;
+    
     padding: 20px;
     background-color: rgb(75, 75, 75);
 }
 
 .direitos{
-    justify-content: center;
     bottom: 0%;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding-top: 0.4%;
+    padding-bottom: 0.4%;
     background-color: black;
     color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 .movedor{
