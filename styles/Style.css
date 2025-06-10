@@ -21,16 +21,18 @@ main{
     background-color: rgb(75, 75, 75);
 }
 
+#loading-gif {
+    width: 100%; 
+    height: auto;
+}
+
 .direitos{
-    bottom: 0%;
+  
     width: 100%;
     text-align: center;
-    padding-top: 0.4%;
-    padding-bottom: 0.4%;
     background-color: black;
     color: white;
     position: fixed;
-    left: 0;
     bottom: 0;
 }
 
@@ -151,7 +153,7 @@ a{
 #navbar2{
   display: flex;
   justify-content: center;
- align-items: center;
+  align-items: center;
 }
 
 .Container{
@@ -225,7 +227,9 @@ a{
     border-radius: 50px;
 }
 
-
+#titulocarregamento{
+    text-align: center;
+}
 
 
 
