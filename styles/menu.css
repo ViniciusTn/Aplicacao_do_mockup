@@ -110,3 +110,42 @@ p{
 #iconNotif{
     height: 130px;
 }
+
+.buttonVoltar{
+    background-color: rgb(75, 75, 75);
+    padding: 1px 16px;
+    border-radius: 12px;
+    display: flex;
+    border: none;
+    margin-top: 10px;
+    
+}
+
+.buttonVoltar:hover{
+    transform: scale(1.1);
+}
+
+.divCorpo{
+    background-color:#3b3b3a ;
+    padding: 9px 5px;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding-bottom: 100px;
+}
+
+.trem{
+    background-color: #ffe500;
+    padding: 10px;
+    border-radius: 13px;
+    margin: 5px;
+    border-bottom: 15px;
+    margin-top: 40px;
+}
+
+.tremV{
+   height: 150px;
+}
+
+#problema{
+    color: red;
+}
