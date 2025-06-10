@@ -1,0 +1,85 @@
+
+body{
+    background-color: #ffe500;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main{
+    background-color: #323030;
+    align-items: center;
+    height: 760px;
+    
+    
+}
+
+.buttonsamarelo{  
+    background-color: #ffe500;
+    padding: 50px;
+    padding-bottom: 70px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.secao1{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.secao2{
+    display: flex;
+    margin-left: 10px;
+}
+
+.secao3{
+    display: flex;
+    margin-left: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.buttonVoltar{
+    background-color: rgb(75, 75, 75);
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    border: none;
+}
+
+.buttonVoltar:hover{
+    transform: scale(1.1);
+}
