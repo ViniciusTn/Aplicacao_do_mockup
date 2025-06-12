@@ -4,27 +4,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/Style.css">
     <link rel="stylesheet" href="../styles/style_menu.css">
+    <script src="../scripts/ButtonValidators.js"></script>
     <title>Gerenciador de funcionarios</title>
 </head>
 <body>
 
-    <header>
+    <header id="gerDeFuncionarios">
+        <button onclick= "window.location.href='menuInicial.html'"  class="buttonVoltar" type="button">
+            <img src="../assets/icons/botaoVoltar.png" alt="Ícone de botão" />
+        </button>
         <br>
-        <div id="Navbar">
-            <div class="pesquisar"><img id="lupa" src="../assets/imgs/Pesquisar.png" alt="pesquisar"> </div>
-        </div>
+        
+        
+<div id="textBuscar">
+    <h1 id="sizeTextBuscar">Buscar Funcionário</h1>
+    <div class="pesquisar">
+            
+        <input type="text" id="inputBusca" placeholder="nome funcionário" />
+        
+        <button onclick="buscar()">
+            <img id="lupa" src="../assets/imgs/Pesquisar.png" alt="Pesquisar" />
+        </button>
+    </div>
+</div>
     </header>
     
     <main>
         <div id="Adicionar">
-            <div>
-                <button type="button" id="botaoFuncionario">
-                    <div class="flex">
-                        <img src="../assets/imgs/Mais.png" alt="butão de mais" width="10%">
-                        <p>Adicionar novo funcionarios</p>
-                    </div>
-                </button> 
-            </div>
+            <button type="button" id="botaoAddFuncionario" onclick="adicionarFuncionario()">
+                <div class="conteudoBotao">
+                    <img src="../assets/imgs/Mais.png" alt="ícone de adicionar" class="iconeMais">
+                    <p>Adicionar novo funcionário</p>
+                </div>
+            </button>
         </div>
         
         <div class="scroll">
