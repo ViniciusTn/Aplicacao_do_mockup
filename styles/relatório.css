@@ -1,20 +1,19 @@
-
-body{
+body {
     background-color: #ffe500;
     margin: 0;
     padding: 0;
-    
+
 }
 
-main{
+main {
     background-color: #323030;
     align-items: center;
     height: 760px;
-    
-    
+
+
 }
 
-.buttonsamarelo{  
+.buttonsamarelo {
     background-color: #ffe500;
     padding: 50px;
     padding-bottom: 70px;
@@ -22,20 +21,55 @@ main{
     border-radius: 15px;
 }
 
-.secao1{
+#erro {
+    text-align: center;
+    color: #f30808;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100px;
+
+}
+
+#analises {
+    text-align: center;
+    color: #e4c413;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.secao1 {
     display: flex;
     margin-left: 10px;
     margin-top: 10px;
 }
 
-.secao2{
+.secao2 {
     display: flex;
     margin-left: 10px;
 }
 
-.secao3{
+.secao3 {
     display: flex;
     margin-left: 110px;
+}
+
+.informacao {
+    background-color: #ffe500;
+    padding: 8%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+#indisponivel{
+    text-align: center;
+    color: #f30808;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+
+}
+
+#mensagem{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
 }
 
 
@@ -68,11 +102,7 @@ main{
 
 
 
-
-
-
-
-.buttonVoltar{
+.buttonVoltar {
     background-color: rgb(75, 75, 75);
     padding: 12px 16px;
     border-radius: 12px;
@@ -80,6 +110,6 @@ main{
     border: none;
 }
 
-.buttonVoltar:hover{
+.buttonVoltar:hover {
     transform: scale(1.1);
 }
