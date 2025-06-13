@@ -1,40 +1,65 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/Style.css">
-    <link rel="stylesheet" href="../styles/style_menu.css">
-    <script src="../scripts/ButtonValidators.js"></script>
-    <title>teste</title>
-</head>
-<body>
-    <header>
-        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/menu.css">
+        <link rel="icon" href="../assets/icons/iconeVaitrem.png" type="image/png">
+
+        <title>Carregamento</title>
+    
+    </head>
+    <body>
+    
+        <header>
             <button onclick= "window.location.href='menuInicial.html'"  class="buttonVoltar" type="button">
             <img src="../assets/icons/botaoVoltar.png" alt="Ícone de botão" />
             </button>
+        </header>
 
-    </header>
 
-    <main>
-        <div class="Submenu">
-            <div class="flex">
-                <div class="padding">
-                    <a href="Loading.html">
-                        <div class="quadradoAmarelo">
-                            <img class="foto" src="../assets/icons/iconeD.png" alt="Icone Dashboard">
-                            <h3>Dashboard</h3>
-                        </div>
-                    </a>
+        <main>
+           
+            <div class="divCorpo">
+
+                 <p id="fontAmarelo"><strong> <  Ultimo Trem Acessado</strong></p>
+                <div class="flex">
+                    <img id="tremV" src="../assets/imgs/TremVcinza.png" alt="Trem  Vermelho">
+
                 </div>
+
+                <p id="fontAmarelo">Integridade dos trilhos</p>
+                <label for="file">Integridade dos trilhos:</label><br>
+                <progress id="file" max="100" value="70">89%</progress> 70%
+
+                <p id="fontAmarelo">Quantidade dos trilhos</p>
+                <label for="file">Quantidade de Combustivel:</label>
+                <progress id="file" max="100" value="70">20%</progress> 70%
+
+                <p id="fontAmarelo"><strong>Funcionario sobre o comando</strong></p>
+
+                <p>-----------------------------------</p>
+
+                <p id="fontAmarelo"><strong>Maquinista</strong></p>
+                <p> . Sr Antenor</p>
+
+
+
+
             </div>
-        </div>
-        <h2>Funcionarios sobre o comando</h2>
-    </main>
 
-    <footer>
-
-    </footer>
     
-</body>
-</html>
+
+        </main>
+
+
+        <footer>
+            <br>
+        <div class="direitos">
+        <h3> © 2025 VAITREM. All rights reserved.</h3>
+        </div>
+
+        </footer>
+
+    
+    </body>
