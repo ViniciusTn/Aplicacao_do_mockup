@@ -149,3 +149,16 @@ p{
 #problema{
     color: red;
 }
+
+#tremV{
+    height: 120px;
+}
+
+#fontAmarelo{
+    color: #ffe500;
+}
+
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
