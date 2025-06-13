@@ -20,6 +20,7 @@ body{
 
 .flex{
     display: flex;
+    padding-left: 17px;
 }
 
 #logo{

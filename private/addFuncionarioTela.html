@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Funcionários</title>
+    <link rel="stylesheet" href="../styles/Style.css">
+    <script src="../scripts/gerenciadorFuncionarios.js"></script>
+    <script src="../scripts/ButtonValidators.js"></script>
+</head>
+<body>
+    <header>
+     <button onclick= "window.location.href='../private/gerenciadorFuncionarios.html'"  class="buttonVoltar" type="button">
+            <img src="../assets/icons/botaoVoltar.png" alt="Ícone de botão" />
+        </button>
+        <br>
+    <h1>Lista de Funcionários</h1>
+    </header>
+    <div id="Adicionar">
+        <button type="button" id="botaoAddFuncionario" onclick="window.location.href='adicionar.html'">
+            <div class="conteudoBotao">
+                <img src="../assets/imgs/Mais.png" alt="ícone de adicionar" class="iconeMais" />
+                <p>Adicionar novo funcionário</p>
+            </div>
+        </button>
+    </div>
+
+     <form id="formFuncionario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+      <br>
+      <label for="funcao">Função:</label>
+      <input type="text" id="funcao" name="funcao" required />
+      <br>
+      <label for="imagem">URL da imagem (opcional):</label>
+      <input type="text" id="imagem" name="imagem" placeholder="Ex: ../assets/imgs/Homem5.png" />
+      <br>
+      <div class="botoes">
+    <button type="submit">Adicionar</button>
+        <button type="button" onclick="voltar()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+    <div id="listaFuncionarios"></div>
+
+</body>
+</html>

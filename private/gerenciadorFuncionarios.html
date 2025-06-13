@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="../styles/Style.css">
     <link rel="stylesheet" href="../styles/style_menu.css">
     <script src="../scripts/ButtonValidators.js"></script>
+    <script src="../scripts/gerenciadorFuncionarios.js"></script>
     <title>Gerenciador de funcionarios</title>
 </head>
 <body>
 
     <header id="gerDeFuncionarios">
-        <button onclick= "window.location.href='menuInicial.html'"  class="buttonVoltar" type="button">
+        <button onclick= "window.location.href='../public/menuInicial.html'"  class="buttonVoltar" type="button">
             <img src="../assets/icons/botaoVoltar.png" alt="Ícone de botão" />
         </button>
         <br>
@@ -20,30 +21,30 @@
     <h1 id="sizeTextBuscar">Buscar Funcionário</h1>
     <div class="pesquisar">
             
-        <input type="text" id="inputBusca" placeholder="nome funcionário" />
+        <input type="text" id="inputBusca" placeholder="nome funcionário..." oninput="buscar()" />
         
-        <button onclick="buscar()">
-            <img id="lupa" src="../assets/imgs/Pesquisar.png" alt="Pesquisar" />
-        </button>
+        <img id="lupa" src="../assets/imgs/Pesquisar.png" alt="Pesquisar" />
+       
     </div>
 </div>
     </header>
     
-    <main>
-        <div id="Adicionar">
-            <button type="button" id="botaoAddFuncionario" onclick="adicionarFuncionario()">
-                <div class="conteudoBotao">
-                    <img src="../assets/imgs/Mais.png" alt="ícone de adicionar" class="iconeMais">
-                    <p>Adicionar novo funcionário</p>
-                </div>
-            </button>
-        </div>
+<main id="alinhamentoDoBotao">
+    <div id="Adicionar">
+        <button type="button" id="botaoAddFuncionario" onclick="window.location.href='addFuncionarioTela.html'">
+            <div class="conteudoBotao">
+                <img src="../assets/imgs/Mais.png" alt="ícone de adicionar" class="iconeMais">
+                <p>Editar ou Adicionar Funcionários</p>
+            </div>
+        </button>
+    </div>
+
         
-        <div class="scroll">
+    <div class="scroll">
         <div>
         <div class="nav"> 
         <div class="gerenciador"> 
-                <div class="nav">
+            <div class="nav">
                 <div>
                 <img src="../assets/imgs/Homem1.png" class="funcionariano"  alt="Antenor: Maquinista">
                 </div>
@@ -71,13 +72,13 @@
                 <img src="../assets/imgs/homem4.png" class="funcionariano"  alt="Jonata: Manobrista">
                 </div>
                 <h1> Jonata: Manobrista</h1>
-                </div>
+            </div>
 
-            </div>
-            </div>
-            </div>
+         </div>
         </div>
-    </main>
+        </div>
+    </div>
+</main>
 
     <footer> 
         <br>

@@ -16,8 +16,7 @@ header{
 }
 
 main{
-    
-    padding: 20px;
+    width: 100%;
     background-color: rgb(75, 75, 75);
 }
 
@@ -110,7 +109,12 @@ a{
 }
 
 #botaoAddFuncionario:hover {
-    background-color: rgb(255, 255, 120); /* Efeito ao passar o mouse */
+    background-color: rgb(255, 255, 120); 
+}
+
+#alinhamentoDoBotao{
+    padding: 20px;
+
 }
 
 .conteudoBotao {
@@ -123,6 +127,13 @@ a{
     width: 10%;
 }
 
+.card-funcionario {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f5f5f5;
+}
 
 #arrumador{
     justify-content: center;
@@ -161,7 +172,8 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 14px; 
+    gap: 13%;
 }
 
 #textBuscar{
@@ -177,7 +189,7 @@ a{
 #sizeTextBuscar{
     font-size: 21px;
     margin: 1px;
-  
+    
 }
 
 .pesquisar {
