@@ -7,7 +7,7 @@
     <script src="../scripts/ValidarLogin.js"></script>
         <script src="../scripts/ButtonValidators.js"></script>
 
-    <title>Carregamento</title>
+    <title>Gestão de Rotas</title>
 
 </head>
 <body>
@@ -26,85 +26,21 @@
     
     <main>
         <div class="Teste">
-            <div>
+            <h1>Gestão de Rotas</h1>
             <div class="Container">
-                <div class="LinhaChuva">
-                    <h1>Linha 3</h1>
-                    <img class="Alerta2" src="../assets/imgs/Alerta.png" alt="">
-                    
-                </div>
-                <div class="TelaLinha">
-                    <br>
-                    <img class="imagemrotas" src="../assets/imgs/gestaoderotas.png" alt="">
-                    <br>
-                </div>
-                <h1>Chuvoso</h1>
+                <form id="rotaForm">
+                    <label for="nomeRota">Nome da Rota:</label>
+                    <input type="text" id="nomeRota" name="nomeRota" required>
+                    <br><br>
+                    <label for="descricaoRota">Descrição:</label>
+                    <input type="text" id="descricaoRota" name="descricaoRota" required>
+                    <br><br>
+                    <button type="submit">Adicionar Rota</button>
+                </form>
+                <br>
+                <h2>Rotas Cadastradas</h2>
+                <ul id="listaRotas"></ul>
             </div>
-            <br>
-            <br>
-            
-                <div class="Defeito">
-                    
-                     <div class="flex">
-                        <a href="#" class="botao-div">
-                            <div class="conteudo-botao">
-                              <strong><h1>Defeito no trilho</h1></strong>
-                            </div>
-                          </a>
-                         <img class="Alerta2" src="../assets/imgs/Alerta.png" alt="">
-                     </div>
-                    
-                </div>
-            
-            <br>
-            <br>
-            <div class="ContatarMaquinista">
-                <br>
-                <a href="#" class="botao-div">
-                    <div class="conteudo-botao">
-                      <strong><h1>Contatar Maquinista</h1></strong>
-                    </div>
-                  </a>
-                <br>
-            </div>
-            <br>
-            <br>
-            <div class="AlterarRota">
-                <br>
-                
-                <a href="#" class="botao-div">
-                    <div class="conteudo-botao">
-                      <strong><h1>Alterar Rota</h1></strong>
-                    </div>
-                  </a>
-                <br>
-            </div>
-
-
-
-
-
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <br>
-            <br>
-            <br>
-        </div>
         </div>
     </main>
 
@@ -114,6 +50,6 @@
         <h3> © 2025 VAITREM. All rights reserved.</h3>
         </div>
     </footer>
-    
+    <script src="../scripts/rotas.js"></script>
 </body>
 </html>
