@@ -16,11 +16,12 @@ $estacao = $result->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="../assets/icons/iconeVaitrem.png" type="image/png">
     <script src="../scripts/ValidarLogin.js"></script>
         <script src="../scripts/ButtonValidators.js"></script>
 
-    <title>Carregamento</title>
+    <title>Gestão de Rotas</title>
 
 </head>
 <body>
@@ -39,12 +40,12 @@ $estacao = $result->fetch_assoc();
 
     <main>
         <div class="Teste">
-            <div>
+            <h1>Gestão de Rotas</h1>
             <div class="Container">
                 <div class="LinhaChuva">
                     <h1>Linha 3</h1>
                     <img class="Alerta2" src="../assets/imgs/Alerta.png" alt="">
-
+                    
                 </div>
                 <div class="TelaLinha">
                     <br>
@@ -55,9 +56,9 @@ $estacao = $result->fetch_assoc();
             </div>
             <br>
             <br>
-
+            
                 <div class="Defeito">
-
+                    
                      <div class="flex">
                         <a href="#" class="botao-div">
                             <div class="conteudo-botao">
@@ -66,9 +67,9 @@ $estacao = $result->fetch_assoc();
                           </a>
                          <img class="Alerta2" src="../assets/imgs/Alerta.png" alt="">
                      </div>
-
+                    
                 </div>
-
+            
             <br>
             <br>
             <div class="ContatarMaquinista">
@@ -84,7 +85,7 @@ $estacao = $result->fetch_assoc();
             <br>
             <div class="AlterarRota">
                 <br>
-
+                
                 <a href="#" class="botao-div">
                     <div class="conteudo-botao">
                       <strong><h1>Alterar Rota</h1></strong>
@@ -93,6 +94,30 @@ $estacao = $result->fetch_assoc();
                 <br>
             </div>
 
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <br>
+            <br>
+            <br>
         </div>
         </div>
     </main>
@@ -103,6 +128,6 @@ $estacao = $result->fetch_assoc();
         <h3> © 2025 VAITREM. All rights reserved.</h3>
         </div>
     </footer>
-
+    
 </body>
 </html>
