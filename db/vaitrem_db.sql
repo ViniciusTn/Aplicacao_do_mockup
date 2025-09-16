@@ -47,3 +47,26 @@ CREATE TABLE Notificacao (
     data_envio DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
+
+-- =========================
+-- DADOS INICIAIS
+-- =========================
+
+-- Inserindo Trens
+INSERT INTO Trem (codigo_trem, capacidade) VALUES
+('TREM-001', 300),
+('TREM-002', 250);
+
+-- Inserindo Estações
+INSERT INTO Estacao (nome, cidade, estado) VALUES
+('Estação Central', 'JLLE', 'SC'),
+('Estação do Norte', 'JLLE', 'SC'),
+('Estação da Sul', 'JLLE', 'SC');
+
+-- Inserindo Usuários
+INSERT INTO Usuario (nome, email, senha, tipo) VALUES
+('Ana Silva', 'ana.silva@email.com', '12345', 'passageiro'),
+('Vinicius Tavares', 'vinicius.tavares@email.com', '12345', 'passageiro'),
+('Thiago Thierry', 'thiago.thierry@email.com', '12345', 'funcionario'),
+('Rafael Sonni', 'rafael.sonni@email.com', '12345', 'admin'),
+('Gabriel Vieira', 'gabriel.vieira@email.com', '12345', 'passageiro');
