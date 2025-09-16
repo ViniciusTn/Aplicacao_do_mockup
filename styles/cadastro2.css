@@ -43,11 +43,11 @@ body {
 .cadastro-box {
   background-color: #323030;
   border-radius: 20px;
-  padding: 200px 100px;
+  padding: 40px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
+  width: 400px;
   
 }
 

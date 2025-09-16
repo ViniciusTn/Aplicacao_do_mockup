@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+include '../db.php';
+
+// Fetch trens
+$result = $conn->query("SELECT * FROM Trem");
+$trens = $result->fetch_all(MYSQLI_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,12 +22,12 @@
             <script src="../scripts/ButtonValidators.js"></script>
 
         <title>Carregamento</title>
-    
+
     </head>
     <body>
-    
+
         <header>
-            <button onclick= "window.location.href='menuInicial.html'"  class="buttonVoltar" type="button">
+            <button onclick= "window.location.href='menuInicial.php'"  class="buttonVoltar" type="button">
             <img src="../assets/icons/botaoVoltar.png" alt="Ícone de botão" />
             </button>
         </header>
@@ -22,31 +35,15 @@
 
         <main>
             <div class="divCorpo">
-
+                <?php foreach ($trens as $trem): ?>
                 <div class="trem">
                     <div class="flex">
-                        <img class="tremV" src="../assets/imgs/2.png" alt="">
-                        <h1>Trem   KM2D</h1><br><br>
-                        -Sem <br> adiversidades
+                        <img class="tremV" src="../assets/imgs/<?php echo $trem['id_trem']; ?>.png" alt="">
+                        <h1>Trem   <?php echo $trem['codigo_trem']; ?><br><br>
+                        -Sem adiversidades</h1>
                     </div>
                 </div>
-
-                <div class="trem">
-                    <div class="flex">
-                        <img class="tremV" src="../assets/imgs/3.png" alt="">
-                        <h1>Trem   K2VF</h1>
-                        <strong id="problema"><br>-PROBLEMAS <br> EM ROTAS-</strong>
-                    </div>
-                </div>
-
-                <div class="trem">
-                    <div class="flex">
-                        <img class="tremV" src="../assets/imgs/4.png" alt="">
-                        <h1>Trem   VSM3</h1><br><br>
-                        -Sem <br> adiversidades
-                    </div>
-                </div>
-
+                <?php endforeach; ?>
             </div>
 
         </main>
@@ -60,5 +57,6 @@
 
         </footer>
 
-    
+
     </body>
+</html>

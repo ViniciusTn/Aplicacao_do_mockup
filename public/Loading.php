@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+// Perhaps redirect after loading
+header("Refresh: 3; url=menuInicial.php");
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +27,7 @@
         </div>
         <h1 id="titulocarregamento">VAITREM</h1>
     </header>
-    
+
     <main>
 
         <div class="flex">
@@ -26,12 +36,12 @@
 
     </main>
 
-    <footer> 
+    <footer>
         <br>
         <div class="direitos">
         <h3> © 2025 VAITREM. All rights reserved.</h3>
         </div>
     </footer>
-    
+
 </body>
 </html>

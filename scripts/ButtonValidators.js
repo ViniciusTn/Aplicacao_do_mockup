@@ -10,6 +10,6 @@ function setupBackToMenu(buttonId) {
     }
 
     button.addEventListener('click', () => {
-        window.location.href = "menuInicial.html";
+        window.location.href = "menuInicial.php";
     });
 }

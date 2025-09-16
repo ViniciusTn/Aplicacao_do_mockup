@@ -1,3 +1,30 @@
+<?php
+session_start();
+include '../db.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
+
+    // Prepare and execute query
+    $stmt = $conn->prepare("SELECT id_usuario, nome, tipo FROM Usuario WHERE email = ? AND senha = ?");
+    $stmt->bind_param("ss", $usuario, $senha);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        $_SESSION['user_id'] = $user['id_usuario'];
+        $_SESSION['user_name'] = $user['nome'];
+        $_SESSION['user_type'] = $user['tipo'];
+        header("Location: menuInicial.php");
+        exit();
+    } else {
+        $error = "Usuário ou senha inválidos.";
+    }
+    $stmt->close();
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +36,7 @@
 </head>
 
 <body>
-    
+
     <header class="header_login">
         <div></div>
         <img class="foto" src="../assets/icons/iconeVaitrem.png" alt="icone da empresa">
@@ -20,8 +47,8 @@
         <div class="login">
             <br>
             <h2 id="logincor">LOGIN</h2>
-        
-            <form id="loginFormulario">
+
+            <form id="loginFormulario" method="POST" action="login.php">
 
                 <label for="usuario"></label>
                 <input type="text" id="usuario" name="usuario" required placeholder="Usuário">
@@ -31,8 +58,8 @@
                 <br>
 
                 <label for="senha"></label>
-                <input type="text" id="senha" name="senha" required placeholder="Senha">
-                <div class="error" id="erroSenha"></div>
+                <input type="password" id="senha" name="senha" required placeholder="Senha">
+                <div class="error" id="erroSenha"><?php echo isset($error) ? $error : ''; ?></div>
 
 
                 <br>
@@ -46,9 +73,9 @@
 
                 <button type="submit">Entrar</button>
         </div>
-            
+
             </form>
-    
+
     </main>
 
     <footer>
