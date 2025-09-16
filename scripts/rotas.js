@@ -17,9 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     rotas.forEach((rota, index) => {
       const li = document.createElement('li');
-      li.textContent = `${rota.nome} - ${rota.descricao} `;
+      li.className = 'list-group-item d-flex justify-content-between align-items-center';
+      li.textContent = `${rota.nome} - ${rota.descricao}`;
+
+      const btnGroup = document.createElement('div');
 
       const editButton = document.createElement('button');
+      editButton.className = 'btn btn-sm btn-primary me-2';
       editButton.textContent = 'Editar';
       editButton.addEventListener('click', () => {
         const novoNome = prompt('Novo nome da rota:', rota.nome);
@@ -32,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       const deleteButton = document.createElement('button');
+      deleteButton.className = 'btn btn-sm btn-danger';
       deleteButton.textContent = 'Excluir';
       deleteButton.addEventListener('click', () => {
         if (confirm('Tem certeza que deseja excluir esta rota?')) {
@@ -41,8 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      li.appendChild(editButton);
-      li.appendChild(deleteButton);
+      btnGroup.appendChild(editButton);
+      btnGroup.appendChild(deleteButton);
+      li.appendChild(btnGroup);
       listaRotas.appendChild(li);
     });
   }
