@@ -6,14 +6,14 @@ if (!isset($_SESSION['user_id'])) {
 }
 include '../db.php';
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Inicial</title>
     <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="icon" href="../assets/icons/iconeVaitrem.png" type="image/png">
 </head>
 <body>
     <header>
@@ -21,68 +21,53 @@ include '../db.php';
             <div id="titulo">
                 <div class="flex">
                     <h1>VAITREM.</h1>
-                    <img id="logo" src="../assets/icons/vaiTremLogo.png" alt="">
+                    <img id="logo" src="../assets/icons/vaiTremLogo.png" alt="Logo VAITREM">
                 </div>
             </div>
         </div>
-
     </header>
-
     <main>
         <div id="corpo">
             <div class="flex">
                 <div class="app">
-
-                    <a href="Dashboard.php">
-                        <img class="icone" src="../assets/icons/D.png" alt="D" />
+                    <a href="dashboard.php">
+                        <img class="icone" src="../assets/icons/D.png" alt="Dashboard">
                     </a>
-
-                    <p><strong>DashBoard</strong></p>
+                    <p><strong>Dashboard</strong></p>
                 </div>
-
                 <div id="rota">
-
                     <a href="GestaoDeRotas.php">
-                        <img class="icone" src="../assets/icons/trem.png" alt="TREM" />
+                        <img class="icone" src="../assets/icons/trem.png" alt="Gestão de Rotas">
                     </a>
-
                     <p><strong>G. de Rotas</strong></p>
                 </div>
             </div>
-
             <div class="flex">
                 <div id="usuarioCorpo">
-
-                    <a href="../private/gerenciadorFuncionarios.php">
-                        <img class="icone" src="../assets/icons/usuario.png" alt="USUARIO" />
+                    <a id="usuarioCorpoText" href="../private/gerenciadorFuncionarios.php">
+                        <img id="iconeGestaoFuncionario" src="../assets/icons/usuario.png" alt="Funcionários">
                     </a>
-
-                    <p><strong>G. de <br>Funcionarios</strong></p>
+                    <p><strong>G. de <br>Funcionários</strong></p>
                 </div>
-
                 <div id="relatorioCorpo">
-
                     <a href="relatorios.php">
-                        <img id="relatorio" src="../assets/icons/relatorio.png" alt="RELATORIO" />
+                        <img id="relatorio" src="../assets/icons/relatorio.png" alt="Relatórios">
                     </a>
-
-                    <p><strong>Relatorio</strong></p>
+                    <div id="relatoriotext"><p><strong>Relatórios</strong></p></div>
                 </div>
             </div>
-
             <div class="notificacoes">
                 <div id="notif">
-                    <p><strong>NOTIFICAÇÃO</strong></p>
-
+                    <p><strong>Notificações</strong></p>
                 </div>
-                <img id="iconNotif" src="../assets/icons/Notificacao.png" alt="" />
+                <img id="iconNotif" src="../assets/icons/Notificacao.png" alt="Notificações">
             </div>
         </div>
     </main>
-
     <footer>
-
+        <div class="direitos">
+            <h4>© 2025 VAITREM. All rights reserved.</h4>
+        </div>
     </footer>
-
 </body>
 </html>

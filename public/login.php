@@ -6,8 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
-    // Prepare and execute query
-    $stmt = $conn->prepare("SELECT id_usuario, nome, tipo FROM Usuario WHERE email = ? AND senha = ?");
+    $stmt = $conn->prepare("SELECT id_usuario, nome, tipo FROM Usuario WHERE nome = ? AND senha = MD5(?)");
     $stmt->bind_param("ss", $usuario, $senha);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -25,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
 }
 ?>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="../scripts/ValidarLogin.js"></script>
     <title>VAITREM</title>
 </head>
-
 <body>
 
     <header class="header_login">
@@ -50,40 +48,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <form id="loginFormulario" method="POST" action="login.php">
 
-                <label for="usuario"></label>
                 <input type="text" id="usuario" name="usuario" required placeholder="Usuário">
                 <div class="error" id="erroUsuario"></div>
 
-                <br>
-                <br>
+                <br><br>
 
-                <label for="senha"></label>
                 <input type="password" id="senha" name="senha" required placeholder="Senha">
                 <div class="error" id="erroSenha"><?php echo isset($error) ? $error : ''; ?></div>
 
+                <br><br>
 
-                <br>
-                <br>
-
-                <input type="checkbox">
+                <input type="checkbox" id="lembre">
                 <label for="lembre" class="checkbox">Lembre de mim :</label>
 
-                <br>
-                <br>
+                <br><br>
 
                 <button type="submit">Entrar</button>
-        </div>
-
             </form>
-
+        </div>
     </main>
 
     <footer>
         <div class="direitos">
-        <h4> © 2025 VAITREM. All rights reserved.</h4>
+            <h4>© 2025 VAITREM. All rights reserved.</h4>
         </div>
     </footer>
 
 </body>
-
 </html>
