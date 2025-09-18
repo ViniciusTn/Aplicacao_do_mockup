@@ -364,3 +364,132 @@ a{
     border-radius: 10px;
     color: white;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .Teste {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .Container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .LinhaChuva {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .LinhaChuva h1 {
+        font-size: 1.5em;
+    }
+
+    .Alerta2 {
+        width: 100px;
+        height: auto;
+    }
+
+    .imagemrotas {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+    }
+
+    .Defeito, .ContatarMaquinista, .AlterarRota {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .Defeito h1, .ContatarMaquinista h1, .AlterarRota h1 {
+        font-size: 1.2em;
+    }
+
+    .buttonVoltar {
+        padding: 8px 12px;
+    }
+
+    .buttonVoltar img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .direitos {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .foto {
+        width: 150px;
+    }
+
+    #logincor {
+        font-size: 1.5em;
+    }
+
+    .login {
+        padding: 10px;
+    }
+
+    .quadradoAmarelo {
+        padding: 5px;
+    }
+
+    .Gerenciador {
+        padding: 10px;
+    }
+
+    #botaoAddFuncionario {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card-funcionario {
+        padding: 5px;
+        margin: 5px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .scroll {
+        height: 60%;
+    }
+
+    #gerDeFuncionarios {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pesquisar {
+        width: 100%;
+    }
+
+    #lupa {
+        width: 30px;
+    }
+
+    .Alerta {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .voltar {
+        height: 50px;
+    }
+
+    .Monitoramento {
+        font-size: 1.2em;
+    }
+
+    .Letrasmonitoramento {
+        font-size: 0.9em;
+    }
+
+    .Reportar {
+        margin: 5px;
+        padding: 5px;
+    }
+}
