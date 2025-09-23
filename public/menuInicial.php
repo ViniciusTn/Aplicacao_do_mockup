@@ -24,6 +24,9 @@ include '../db.php';
                     <img id="logo" src="../assets/icons/vaiTremLogo.png" alt="Logo VAITREM">
                 </div>
             </div>
+            <div id="logout">
+                <a href="../scripts/logout.php">Sair</a>
+            </div>
         </div>
     </header>
     <main>
@@ -42,6 +45,16 @@ include '../db.php';
                     <p><strong>G. de Rotas</strong></p>
                 </div>
             </div>
+            <?php if ($_SESSION['user_type'] === 'admin'): ?>
+            <div class="flex">
+                <div id="addUsuario">
+                    <a href="../private/addUsuario.php">
+                        <img class="icone" src="../assets/icons/usuario.png" alt="Adicionar Usuário">
+                    </a>
+                    <p><strong>Adicionar Usuário</strong></p>
+                </div>
+            </div>
+            <?php endif; ?>
             <div class="flex">
                 <div id="usuarioCorpo">
                     <a id="usuarioCorpoText" href="../private/gerenciadorFuncionarios.php">
