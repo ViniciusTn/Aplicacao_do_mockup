@@ -25,7 +25,7 @@ include '../db.php';
                 </div>
             </div>
             <div id="logout">
-                <a href="../scripts/logout.php">Sair</a>
+                <a href="../scripts/logout.php">🚪 Sair</a>
             </div>
         </div>
     </header>

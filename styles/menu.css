@@ -7,7 +7,10 @@ body{
 
 #navbar{
     background-color: #ffe500;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 #logout {
@@ -19,14 +22,19 @@ body{
     color: black;
     padding: 10px 20px;
     border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #logout a:hover {
     background-color: #ffed4e;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 #titulo{
@@ -227,4 +235,22 @@ p{
 label {
   padding-right: 10px;
   font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: row;
+        padding: 5px;
+    }
+    #titulo {
+        font-size: 20px;
+    }
+    #logo {
+        height: 80px;
+    }
+    #logout a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
