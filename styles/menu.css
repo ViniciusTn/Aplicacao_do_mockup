@@ -10,6 +10,25 @@ body{
 
 }
 
+#logout {
+    margin: 15px;
+}
+
+#logout a {
+    background-color: #ffe500;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#logout a:hover {
+    background-color: #ffed4e;
+}
+
 #titulo{
     background-color: #dbc607;
     padding: 0px;
@@ -47,6 +66,20 @@ body{
     
 }
 
+#perfil{
+    background-color: #ffe500;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 15px;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px
+}
+
+#iconePerfil{
+    height: 130px;
+}
+
 #rota{
     background-color: #ffe500;
     padding: 10px;
@@ -56,6 +89,20 @@ body{
     padding-left: 29px;
     padding-right: 29px;
     
+}
+
+#iconeGestaoDeRotas{
+    height: 130px;
+}
+
+#addUsuario{
+    background-color: #ffe500;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 15px;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px
 }
 
 #usuarioCorpo{
