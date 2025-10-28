@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
-    $stmt = $conn->prepare("SELECT id_usuario, nome, tipo FROM Usuario WHERE nome = ? AND senha = MD5(?)");
+    $stmt = $conn->prepare("SELECT id_usuario, nome, tipo FROM Usuario WHERE LOWER(nome) = LOWER(?) AND senha = MD5(?)");
     $stmt->bind_param("ss", $usuario, $senha);
     $stmt->execute();
     $result = $stmt->get_result();

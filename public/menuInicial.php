@@ -24,6 +24,9 @@ include '../db.php';
                     <img id="logo" src="../assets/icons/vaiTremLogo.png" alt="Logo VAITREM">
                 </div>
             </div>
+            <div id="logout">
+                <a href="../scripts/logout.php">🚪 Sair</a>
+            </div>
         </div>
     </header>
     <main>
@@ -35,13 +38,31 @@ include '../db.php';
                     </a>
                     <p><strong>Dashboard</strong></p>
                 </div>
-                <div id="rota">
-                    <a href="GestaoDeRotas.php">
-                        <img class="icone" src="../assets/icons/trem.png" alt="Gestão de Rotas">
+                <div id="perfil">
+                    <a href="perfil.php">
+                        <img id="iconePerfil" src="../assets/icons/iconePessoa.png" alt="Perfil">
                     </a>
-                    <p><strong>G. de Rotas</strong></p>
+                    <p><strong>Perfil</strong></p>
                 </div>
             </div>
+       
+            <div class="flex">
+                    <div id="rota">
+                        <a href="GestaoDeRotas.php">
+                            <img id="iconeGestaoDeRotas" src="../assets/icons/trem.png" alt="Gestão de Rotas">
+                        </a>
+                        <p><strong>G. de Rotas</strong></p>
+                    </div>
+                <?php if ($_SESSION['user_type'] === 'admin'): ?>
+                    <div id="addUsuario">
+                        <a href="../private/addUsuario.php">
+                            <img class="icone" src="../assets/icons/usuario.png" alt="Adicionar Usuário">
+                        </a>
+                        <p><strong>Adicionar Usuário</strong></p>
+                    </div>
+                <?php endif; ?>
+            </div>
+
             <div class="flex">
                 <div id="usuarioCorpo">
                     <a id="usuarioCorpoText" href="../private/gerenciadorFuncionarios.php">
