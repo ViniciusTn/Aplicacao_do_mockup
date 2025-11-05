@@ -79,7 +79,6 @@ $quantity = 70;
                 }
                 document.getElementById('current-weather').innerHTML = `Atual: ${data.current.temperature_2m}°C - ${currentDesc}`;
 
-                
                 let forecastHtml = 'Previsão próximas 3 horas: ';
                 for (let i = 1; i <= 3; i++) {
                     const time = new Date(data.hourly.time[i]).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
@@ -91,8 +90,6 @@ $quantity = 70;
                 document.getElementById('forecast').innerHTML = 'Erro ao carregar previsão.';
             }
         }
-
-        
         window.addEventListener('load', fetchWeather);
     </script>
 </body>

@@ -181,6 +181,17 @@ p{
     text-align: center;
 }
 
+#weather-info {
+    margin-top: 8px;
+    color: #dbc607;
+    font-size: 14px;
+}
+
+#current-weather, #forecast {
+    display: block;
+    margin-bottom: 5px;
+}
+
 #iconNotif{
     height: 130px;
 }
