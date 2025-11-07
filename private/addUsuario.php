@@ -39,37 +39,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="icon" href="../assets/icons/iconeVaitrem.png" type="image/png">
 </head>
 <body>
-    <header>
+    <header class="header_login">
         <button onclick="window.location.href='../public/menuInicial.php'" class="buttonVoltar" type="button">
             <img src="../assets/icons/botaoVoltar.png" alt="Voltar">
         </button>
         <h1>Adicionar Usuário</h1>
     </header>
     <main>
-        <form method="POST" action="addUsuario.php">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-            <br>
-            <label for="tipo">Tipo:</label>
-            <select id="tipo" name="tipo" required>
-                <option value="funcionario">Funcionário</option>
-                <option value="admin">Admin</option>
-            </select>
-            <br>
-            <div class="botoes">
-                <button type="submit">Adicionar</button>
-                <button type="button" onclick="window.location.href='../public/menuInicial.php'">Cancelar</button>
-            </div>
+        <div class="perfil-container">
+            <h2>Adicionar Novo Usuário</h2>
             <?php if (isset($error)): ?>
-                <p style="color: red;"><?php echo $error; ?></p>
+                <p class="error-message"><?php echo $error; ?></p>
             <?php endif; ?>
-        </form>
+            <form method="POST" action="addUsuario.php" class="perfil-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="funcionario">Funcionário</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="botoes">
+                    <button type="submit" class="perfil-button">Adicionar</button>
+                    <button type="button" onclick="window.location.href='../public/menuInicial.php'" class="perfil-button cancel">Cancelar</button>
+                </div>
+            </form>
+        </div>
     </main>
+    <footer>
+        <div class="direitos">
+            <h4>© 2025 VAITREM. All rights reserved.</h4>
+        </div>
+    </footer>
 </body>
 </html>

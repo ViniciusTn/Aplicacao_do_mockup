@@ -18,6 +18,7 @@ header{
 main{
     width: 100%;
     background-color: rgb(75, 75, 75);
+    padding-bottom: 60px;
 }
 
 #loading-gif {
@@ -314,26 +315,6 @@ a{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .buttonVoltar{
     background-color: #3b3b3a;
     padding: 12px 16px;
@@ -368,7 +349,7 @@ a{
 /* Profile Page Styles */
 .perfil-container {
     max-width: 500px;
-    margin: 20px auto;
+    margin: 20px auto 60px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -415,13 +396,14 @@ a{
     color: #555;
 }
 
-.form-group input {
+.form-group input, .form-group select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
+    background-color: white;
 }
 
 .perfil-button {
@@ -438,6 +420,15 @@ a{
 
 .perfil-button:hover {
     background-color: #ffed4e;
+}
+
+.perfil-button.cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.perfil-button.cancel:hover {
+    background-color: #5a6268;
 }
 
 .admin-section {
