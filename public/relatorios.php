@@ -8,16 +8,12 @@ if (!isset($_SESSION['user_id'])) {
 
 include '../db.php';
 
-$result = $conn->query("SELECT * FROM Estacao");
+$result = $conn->query("SELECT DISTINCT linha FROM Estacao ORDER BY linha ASC");
 if (!$result) {
-    die("Erro ao buscar estações: " . $conn->error);
+    die("Erro ao buscar linhas: " . $conn->error);
 }
-$estacoes = $result->fetch_all(MYSQLI_ASSOC);
 
-$linhas = [];
-foreach ($estacoes as $estacao) {
-    $linhas[$estacao['linha']][] = $estacao;
-}
+$linhas = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -41,15 +37,15 @@ foreach ($estacoes as $estacao) {
         <br>
         <h1 id="analises">Relatórios e Análises</h1>
 
-        <?php foreach ($linhas as $numeroLinha => $estacoesLinha): ?>
+        <?php foreach ($linhas as $linha): ?>
             <section class="secao">
-                <?php foreach ($estacoesLinha as $estacao): ?>
-                    <div class="buttonsamarelo">
-                        <a href="errolinha.php?linha=<?= $numeroLinha ?>">
-                            <button class="btn1"><h1>Linha<?= $numeroLinha ?></h1></button>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
+                <div class="buttonsamarelo">
+                    <a href="errolinha.php?linha=<?= $linha['linha'] ?>">
+                        <button class="btn1">
+                            <h1>Linha <?= $linha['linha'] ?></h1>
+                        </button>
+                    </a>
+                </div>
             </section>
         <?php endforeach; ?>
 
