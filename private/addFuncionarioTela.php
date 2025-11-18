@@ -41,49 +41,218 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Funcionários</title>
-    <link rel="stylesheet" href="../styles/Style.css">
+
+    <!-- CSS integrado -->
+    <style>
+        :root {
+            --amarelo: #FFD740;
+            --amarelo-escuro: #e6c237;
+            --cinza-claro: #f5f5f5;
+            --cinza-medio: #dcdcdc;
+            --cinza-escuro: #4a4a4a;
+            --preto: #222;
+            --radius: 14px;
+            --shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--cinza-claro);
+            padding: 20px;
+            color: var(--preto);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--preto);
+        }
+
+        .buttonVoltar img {
+            width: 42px;
+        }
+
+        #Adicionar {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        #botaoAddFuncionario {
+            background: var(--amarelo);
+            border: none;
+            border-radius: var(--radius);
+            padding: 14px 22px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        #botaoAddFuncionario:hover {
+            background: var(--amarelo-escuro);
+            transform: translateY(-2px);
+        }
+
+        #botaoAddFuncionario .conteudoBotao {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--preto);
+        }
+
+        #botaoAddFuncionario img {
+            width: 28px;
+        }
+
+        #formFuncionario {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 540px;
+        }
+
+        #formFuncionario label {
+            font-weight: 600;
+            color: var(--preto);
+            display: block;
+            margin-bottom: 6px;
+            margin-top: 12px;
+        }
+
+        #formFuncionario input {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius);
+            border: 1px solid var(--cinza-medio);
+            outline: none;
+            transition: 0.2s;
+            background: #fff;
+        }
+
+        #formFuncionario input:focus {
+            border-color: var(--amarelo);
+            box-shadow: 0 0 0 2px rgba(255, 215, 64, 0.3);
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 18px;
+        }
+
+        .botoes button {
+            flex: 1;
+            margin: 5px;
+            padding: 12px 10px;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .botoes button[type="submit"] {
+            background: var(--amarelo);
+            color: var(--preto);
+            box-shadow: var(--shadow);
+        }
+
+        .botoes button[type="submit"]:hover {
+            background: var(--amarelo-escuro);
+            transform: translateY(-2px);
+        }
+
+        .botoes button[type="button"] {
+            background: var(--cinza-escuro);
+            color: white;
+        }
+
+        .botoes button[type="button"]:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        #listaFuncionarios {
+            margin-top: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 700px;
+        }
+
+        #listaFuncionarios p {
+            font-size: 17px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--cinza-medio);
+            font-weight: 500;
+        }
+
+        #listaFuncionarios p:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+    <!-- scripts originais -->
     <script src="../scripts/gerenciadorFuncionarios.js"></script>
     <script src="../scripts/ButtonValidators.js"></script>
 </head>
+
 <body>
     <header>
-     <button onclick= "window.location.href='gerenciadorFuncionarios.php'"  class="buttonVoltar" type="button">
-            <img src="../assets/icons/botaoVoltar.png" alt="Ícone de botão" />
+        <button onclick="window.location.href='gerenciadorFuncionarios.php'" class="buttonVoltar" type="button">
+            <img src="../assets/icons/botaoVoltar.png" alt="Botão voltar" />
         </button>
-        <br>
-    <h1>Lista de Funcionários</h1>
+        <h1>Lista de Funcionários</h1>
     </header>
+
     <div id="Adicionar">
         <button type="button" id="botaoAddFuncionario" onclick="window.location.href='addFuncionarioTela.php'">
             <div class="conteudoBotao">
-                <img src="../assets/imgs/Mais.png" alt="ícone de adicionar" class="iconeMais" />
+                <img src="../assets/imgs/Mais.png" class="iconeMais" />
                 <p>Adicionar novo funcionário</p>
             </div>
         </button>
     </div>
 
-     <form id="formFuncionario" method="POST" action="addFuncionarioTela.php">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required />
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      <br>
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required />
-      <br>
-      <label for="funcao">Função:</label>
-      <input type="text" id="funcao" name="funcao" required />
-      <br>
-      <label for="imagem">URL da imagem (opcional):</label>
-      <input type="text" id="imagem" name="imagem" placeholder="../assets/imgs/Homem5.png" />
-      <br>
-      <div class="botoes">
-    <button type="submit">Adicionar</button>
-        <button type="button" onclick="window.location.href='gerenciadorFuncionarios.php'">Cancelar</button>
-      </div>
+    <form id="formFuncionario" method="POST" action="addFuncionarioTela.php">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required />
+
+        <label for="funcao">Função:</label>
+        <input type="text" id="funcao" name="funcao" required />
+
+        <label for="imagem">URL da imagem (opcional):</label>
+        <input type="text" id="imagem" name="imagem" placeholder="../assets/imgs/Homem5.png" />
+
+        <div class="botoes">
+            <button type="submit">Adicionar</button>
+            <button type="button" onclick="window.location.href='gerenciadorFuncionarios.php'">Cancelar</button>
+        </div>
     </form>
-  </div>
 
     <div id="listaFuncionarios">
         <?php
