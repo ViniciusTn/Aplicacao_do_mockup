@@ -151,14 +151,101 @@ $estacao = $result->fetch_assoc();
             font-weight: 400;
         }
 
-        /* SUAVE */
+        /* POPUP DO CHAT */
+        .popup-chat {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .chat-container {
+            background: #102033;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 0 15px rgba(255,210,54,0.4);
+            animation: fadeIn .3s ease-in-out;
+        }
+
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h2 {
+            color: #ffd236;
+        }
+
+        .fecharChat {
+            background: none;
+            border: none;
+            color: #ffd236;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .chat-mensagens {
+            height: 260px;
+            overflow-y: auto;
+            background: rgba(255,255,255,0.05);
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .msg {
+            padding: 8px 12px;
+            margin: 8px 0;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .msg-user {
+            background: rgba(255,210,54,0.2);
+            align-self: flex-end;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .msg-sistema {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .chat-input {
+            display: flex;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .chat-input button {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            background: #ffd236;
+            cursor: pointer;
+        }
+
+        /* ANIMAÇÃO SUAVE */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        main {
-            animation: fadeIn .4s ease-in-out;
         }
     </style>
 </head>
@@ -203,7 +290,7 @@ $estacao = $result->fetch_assoc();
         </div>
 
         <div class="ContatarMaquinista">
-            <a href="#" class="botao-div">
+            <a onclick="abrirChat()" class="botao-div">
                 <div class="conteudo-botao">
                     <strong><h1>Contatar Maquinista</h1></strong>
                 </div>
@@ -225,6 +312,60 @@ $estacao = $result->fetch_assoc();
         <h3>© 2025 VAITREM. All rights reserved.</h3>
     </div>
 </footer>
+
+<!-- POPUP DE CHAT -->
+<div id="popupChat" class="popup-chat">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Comunicação com o Maquinista</h2>
+            <button class="fecharChat" onclick="fecharChat()">X</button>
+        </div>
+
+        <div id="chatMensagens" class="chat-mensagens"></div>
+
+        <div class="chat-input">
+            <input type="text" id="mensagemInput" placeholder="Digite sua mensagem...">
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function abrirChat() {
+    document.getElementById("popupChat").style.display = "flex";
+}
+
+function fecharChat() {
+    document.getElementById("popupChat").style.display = "none";
+}
+
+function enviarMensagem() {
+    let campo = document.getElementById("mensagemInput");
+    let texto = campo.value.trim();
+    if (texto === "") return;
+
+    let chat = document.getElementById("chatMensagens");
+
+    // Mensagem do usuário
+    let msgUser = document.createElement("div");
+    msgUser.classList.add("msg", "msg-user");
+    msgUser.textContent = texto;
+    chat.appendChild(msgUser);
+
+    campo.value = "";
+
+    // Resposta automática (simulação)
+    setTimeout(() => {
+        let msgSistema = document.createElement("div");
+        msgSistema.classList.add("msg", "msg-sistema");
+        msgSistema.textContent = "Mensagem enviada ao maquinista!";
+        chat.appendChild(msgSistema);
+        chat.scrollTop = chat.scrollHeight;
+    }, 500);
+
+    chat.scrollTop = chat.scrollHeight;
+}
+</script>
 
 </body>
 </html>
