@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a1a2f, #102b46);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 20px;
+}
+
+/* Botão voltar */
+.buttonVoltar {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.buttonVoltar img {
+    width: 32px;
+    filter: brightness(0) invert(1);
+}
+
+.buttonVoltar:hover {
+    background: rgba(255, 210, 54, 0.25);
+    transform: scale(1.06);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.divCorpo {
+    width: 95%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#fontAmarelo {
+    color: #ffd236;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#tremV {
+    width: 180px;
+    filter: drop-shadow(0 0 8px rgba(255, 210, 54, 0.4));
+}
+
+progress {
+    width: 100%;
+    height: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 8px 0 3px 0;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, #ffd236, #ffe372);
+    border-radius: 10px;
+}
+
+#weather-info {
+    margin-top: 10px;
+    padding: 15px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+}
+
+#weather-info p {
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+}
