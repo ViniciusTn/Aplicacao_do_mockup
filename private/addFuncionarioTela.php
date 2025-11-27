@@ -9,9 +9,19 @@ include '../db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $funcao = $_POST['funcao'];
-    $imagem = $_POST['imagem'] ?: '../assets/imgs/Homem1.png';
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+
+    // Processa upload da imagem
+    $imagem = '../assets/imgs/Homem1.png'; // padrão
+    if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] == UPLOAD_ERR_OK) {
+        $ext = pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
+        $novo_nome = uniqid('funcionario_') . '.' . $ext;
+        $destino = '../assets/imgs/' . $novo_nome;
+        if (move_uploaded_file($_FILES['imagem']['tmp_name'], $destino)) {
+            $imagem = $destino;
+        }
+    }
 
     if (empty($nome) || empty($funcao) || empty($email) || empty($senha)) {
         $error = "Preencha todos os campos.";
@@ -232,7 +242,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </button>
     </div>
 
-    <form id="formFuncionario" method="POST" action="addFuncionarioTela.php">
+    <form id="formFuncionario" method="POST" action="addFuncionarioTela.php" enctype="multipart/form-data">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required />
 
@@ -245,8 +255,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="funcao">Função:</label>
         <input type="text" id="funcao" name="funcao" required />
 
-        <label for="imagem">URL da imagem (opcional):</label>
-        <input type="text" id="imagem" name="imagem" placeholder="../assets/imgs/Homem5.png" />
+        <label for="imagem">Foto de perfil:</label>
+        <input type="file" id="imagem" name="imagem" accept="image/*" />
 
         <div class="botoes">
             <button type="submit">Adicionar</button>
