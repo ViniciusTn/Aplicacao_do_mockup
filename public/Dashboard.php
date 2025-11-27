@@ -88,7 +88,7 @@ $quantity = 70;
             }
 
             document.getElementById('current-weather').innerHTML =
-                Atual: ${data.current.temperature_2m}°C - ${currentDesc};
+                `Atual: ${data.current.temperature_2m}°C - ${currentDesc}`;
 
             let forecastHtml = 'Previsão próximas 3 horas:<br>';
             for (let i = 1; i <= 3; i++) {
@@ -96,7 +96,7 @@ $quantity = 70;
                     hour: '2-digit', 
                     minute: '2-digit' 
                 });
-                forecastHtml += ${time}: ${data.hourly.temperature_2m[i]}°C<br>;
+                forecastHtml += `${time}: ${data.hourly.temperature_2m[i]}°C<br>`;
             }
 
             document.getElementById('forecast').innerHTML = forecastHtml;

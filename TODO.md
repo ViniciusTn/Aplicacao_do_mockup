@@ -1,1 +1,4 @@
-
+- [x] Fix template string in public/menuInicial.php for current weather
+- [x] Fix template string in public/menuInicial.php for forecast
+- [x] Fix template string in public/Dashboard.php for current weather
+- [x] Fix template string in public/Dashboard.php for forecast

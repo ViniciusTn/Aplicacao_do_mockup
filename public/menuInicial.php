@@ -139,13 +139,13 @@ include '../db.php';
                 }
 
                 document.getElementById('current-weather').innerHTML =
-                    Atual: ${data.current.temperature_2m}°C - ${currentDesc};
+                    `Atual: ${data.current.temperature_2m}°C - ${currentDesc}`;
 
                 let forecastHtml = 'Próximas 3 horas: ';
                 for (let i = 1; i <= 3; i++) {
                     const time = new Date(data.hourly.time[i])
                         .toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-                    forecastHtml += ${time}: ${data.hourly.temperature_2m[i]}°C; ;
+                    forecastHtml += `${time}: ${data.hourly.temperature_2m[i]}°C; `;
                 }
 
                 document.getElementById('forecast').innerHTML = forecastHtml;
